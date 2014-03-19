@@ -19,11 +19,21 @@ body {
   background-repeat: repeat;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "omnes-pro" !important;
+  color: #043d40 !important;
+}
+
 .centered {
   margin: 0 auto;
+  text-align: center;
 }
 
 .logo {
   margin-top: 2em;
   display: block;
+}
+
+.strap {
+  margin-top: 1em;
 }
