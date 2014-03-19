@@ -2,7 +2,7 @@ db:
   image: orchardup/postgresql
 web:
   build: .
-  command: bundle exec rake assets:precompile; bundle exec rackup -p 3000
+  command: bin/serve
   ports:
     - 80:3000
   links:
