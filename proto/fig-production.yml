@@ -1,0 +1,11 @@
+db:
+  image: orchardup/postgresql
+web:
+  build: .
+  command: bundle exec rake assets:precompile; bundle exec rackup -p 3000
+  ports:
+    - 80:3000
+  links:
+    - db
+  environment:
+    RAILS_ENV: production
