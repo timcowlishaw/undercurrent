@@ -17,16 +17,26 @@ body {
   background-image: image-url("bg.png");
   background-position: top left;
   background-repeat: repeat;
+  font-family: 'museo-sans','Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 1.75em !important;
+  color: #043d40 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "omnes-pro" !important;
-  color: #043d40 !important;
+  color: #10b8bf !important;
 }
 
-.centered {
-  text-align: center;
+img {
+  max-width: 100%;
 }
+
+.splash {
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+
 
 .logo {
   margin-top: 2em;
@@ -34,4 +44,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .strap {
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
+
+.blurb {
+}
+
