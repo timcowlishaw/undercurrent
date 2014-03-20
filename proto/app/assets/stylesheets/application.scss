@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require bootstrap_and_overrides
+ *= require formtastic-bootstrap
  *= require_tree .
  */
 
@@ -25,6 +26,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "omnes-pro" !important;
   color: #10b8bf !important;
+  font-weight: normal !important;
+}
+
+label {
+  font-family: "omnes-pro" !important;
+  color: #043d40 !important;
+  font-weight: normal !important;
 }
 
 img {

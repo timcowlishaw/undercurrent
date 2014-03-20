@@ -1,0 +1,16 @@
+<% @title ||= t("devise.titles.sign_up") %>
+
+<div class="row">
+  <div class="col-md-3">
+    <%= semantic_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.input :email, input_html: {autofocus: true} %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation, required: true %>
+      <%= f.actions do %>
+        <%= f.action :submit, label: t("devise.buttons.sign_up") %>
+      <% end %>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

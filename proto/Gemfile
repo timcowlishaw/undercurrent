@@ -46,6 +46,9 @@ end
 
 gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
-gem 'formtastic'
-gem 'formtastic-bootstrap'
 gem 'underscore-rails'
+gem 'devise'
+gem 'devise-formtastic', :git => "git://github.com/timcowlishaw/devise-formtastic.git", :branch => "rails4"
+gem 'formtastic', "~> 2.3.0.rc2"
+gem 'formtastic-bootstrap'
+gem 'bcrypt'
