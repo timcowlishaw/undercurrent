@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-bundle exec rake assets:precompile
-bundle exec rackup -p 3000
