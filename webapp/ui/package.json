@@ -1,0 +1,18 @@
+{
+  "name": "undercurrent-ui",
+  "version": "0.0.1",
+  "description": "The UI for the Undercurrent webapp",
+  "author": "Tim Cowlishaw <tim@timcowlishaw.co.uk>",
+  "scripts": {
+    "preinstall": "npm install -g grunt-cli"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "browserify": "~3.46.1",
+    "grunt-browserify": "~2.0.8",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-connect": "~0.7.1"
+  }
+}
