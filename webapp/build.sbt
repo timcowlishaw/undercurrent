@@ -1,4 +1,4 @@
-import com.joprice.GruntPlugin.GruntKeys._
+import uk.co.timcowlishaw.GulpPlugin.GulpKeys._
 
 name := "Undercurrent"
 
@@ -6,9 +6,10 @@ version := "0.1"
 
 scalaVersion := "2.10.3"
 
-seq(gruntSettings: _*)
 
-gruntAppBase := "ui"
+seq(gulpSettings: _*)
+
+gulpAppBase := "ui"
 
 seq(cucumberSettings : _*)
 
