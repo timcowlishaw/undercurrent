@@ -1,14 +1,12 @@
-import cucumber.api.PendingException
-import cucumber.api.scala.{ScalaDsl, EN}
-
+import support.WebSteps
 package step_definitions {
-  class VistingTheHomepageSteps extends ScalaDsl with EN  {
-    When("""^I visit the homepage$"""){ () =>
-      throw new PendingException()
+  class VistingTheHomepageSteps extends WebSteps {
+    When("""^I visit the homepage$""") { () =>
+      go to path("/")
     }
 
-    Then("""^I should see information about Undercurrent$"""){ () =>
-      throw new PendingException()
+    Then("""^I should see information about Undercurrent$""") { () =>
+      page.text should include("Welcome to Undercurrent")
     }
   }
 }

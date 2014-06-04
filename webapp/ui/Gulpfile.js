@@ -62,3 +62,4 @@ gulp.task("watch", function() {
 
 gulp.task("default", ["copy:html", "copy:images", "browserify", "cssmin"]);
 gulp.task('develop', ['server', 'watch']);
+gulp.task("cucumber", ["default", "server"]);
