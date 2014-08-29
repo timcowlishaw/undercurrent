@@ -1,26 +1,28 @@
-import uk.co.timcowlishaw.GulpPlugin.GulpKeys._
-
 name := "Undercurrent"
 
 version := "0.1"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
-libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "2.0.M5b" % "test",
-  "org.seleniumhq.selenium" % "selenium-java" % "2.23.1" % "test",
-  "org.scalatra" %% "scalatra-scalatest" % "2.2.1" % "test",
-  "org.scalamock" %% "scalamock-scalatest-support" % "3.0.1" % "test"
-)
+scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
-seq(gulpSettings: _*)
-
-gulpAppBase := "ui"
+libraryDependencies ++= {
+  val akkaVersion = "2.3.5"
+  val sprayVersion = "1.3.1"
+  Seq(
+    "com.typesafe.akka"       %% "akka-actor"                   % akkaVersion,
+    "io.spray"                %  "spray-can"                    % sprayVersion,
+    "io.spray"                %  "spray-routing"                % sprayVersion,
+    "io.spray"                %  "spray-testkit"                % sprayVersion  % "test",
+    "org.scalatest"           %% "scalatest"                    % "2.2.1"       % "test",
+    "com.typesafe.akka"       %% "akka-testkit"                 % akkaVersion   % "test",
+    "org.seleniumhq.selenium" %  "selenium-java"                % "2.23.1"      % "test",
+    "org.mockito"             % "mockito-all"                   % "1.9.5"       % "test"
+  )
+}
 
 seq(cucumberSettings : _*)
 
 cucumberStepsBasePackage := "step_definitions"
 
-scalaSource in Test := baseDirectory.value / "features"
-
-resourceDirectory in Test := baseDirectory.value / "features"
+Revolver.settings
