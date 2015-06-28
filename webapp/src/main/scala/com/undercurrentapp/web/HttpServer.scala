@@ -6,7 +6,7 @@ import akka.actor.{ActorSystem, Props}
 import akka.pattern.ask
 import akka.util.Timeout
 import spray.can.Http
-import com.undercurrent.web.RequestRouter
+import com.undercurrentapp.web.RequestRouter
 package com.undercurrentapp.web {
   object HttpServer extends App {
 
@@ -15,7 +15,7 @@ package com.undercurrentapp.web {
       .flatMap { (s : String) => catching(classOf[NumberFormatException]).opt(s.toInt) }
       .getOrElse(8080)
 
-    implicit val system = ActorSystem("com.undercurrentapp.web.HttpServer")
+    implicit val system = ActorSystem("undercurrent-webapp")
 
     val server = new HttpServer(port, interface)
     server.start

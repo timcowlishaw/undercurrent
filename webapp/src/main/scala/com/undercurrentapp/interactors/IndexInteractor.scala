@@ -1,9 +1,9 @@
 import akka.actor.Actor
 import com.undercurrentapp.web.Messages._
 package com.undercurrentapp.interactors {
-  class IndexInteractor extends Actor {
+  class IndexInteractor(private val templateRenderer : com.undercurrentapp.web.TemplateRenderer) extends Actor {
     def receive = {
-      case Get(request) => request.complete("<h1>Welcome to Undercurrent!</h1>")
+      case Get(request) => request.complete(templateRenderer.render("index"))
     }
   }
 }

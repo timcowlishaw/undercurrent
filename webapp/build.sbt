@@ -13,6 +13,7 @@ libraryDependencies ++= {
     "com.typesafe.akka"       %% "akka-actor"                   % akkaVersion,
     "io.spray"                %  "spray-can"                    % sprayVersion,
     "io.spray"                %  "spray-routing"                % sprayVersion,
+    "org.fusesource.scalate"  %% "scalate-core"                 % "1.6.1",
     "io.spray"                %  "spray-testkit"                % sprayVersion  % "test",
     "org.scalatest"           %% "scalatest"                    % "2.2.1"       % "test",
     "com.typesafe.akka"       %% "akka-testkit"                 % akkaVersion   % "test",
@@ -26,3 +27,5 @@ seq(cucumberSettings : _*)
 cucumberStepsBasePackage := "step_definitions"
 
 Revolver.settings
+
+instrumentSettings
