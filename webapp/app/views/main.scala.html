@@ -5,11 +5,21 @@
 <html lang="en">
     <head>
         <title>@title</title>
+        <link rel="stylesheet" media="screen,projection" type="text/css" href="@routes.Assets.versioned("lib/materializecss/css/materialize.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        @content
+      <nav class="green darken-2" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="/" class="brand-logo">Undercurrent</a>
+        </div>
+      </nav>
+        <div class="container">
+          @content
+        </div>
+        <script type="text/javascript" src="@routes.Assets.versioned("lib/jquery/jquery.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.versioned("lib/materializecss/js/materialize.js")"></script>
     </body>
 </html>
